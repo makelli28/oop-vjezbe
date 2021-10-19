@@ -1,28 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int min_broj_u_nizu (int niz[],int duljina_niza){
-	int min = niz[0];
-
+int prepravljeno_2u1(int niz[],int duljina_niza,int* pointer_na_min,int* pointer_na_max){
+	//za maximum
+	for (int i = 0; i < duljina_niza; i++)
+		{
+			if (*pointer_na_max < niz[i]){
+				*pointer_na_max=niz[i];
+			}
+		};
+	//za minimum
 	for (int i = 0; i < duljina_niza; i++)
 	{
-		if (min > niz[i]){
-			min=niz[i];
+		if (*pointer_na_min > niz[i]){
+			*pointer_na_min=niz[i];
 		}
 	};
-	return min;
-	};
-
-int max_broj_u_nizu(int niz[],int duljina_niza){
-	int max = niz[0];
-
-	for (int i = 0; i < duljina_niza; i++){
-		if (max < niz[i]){
-			max=niz[i];
-		}	
-	}
-	return max;
-	};
+}
 
 
 int main()
@@ -30,11 +24,13 @@ int main()
 	int niz[] = {7,1133,22,2222,11,55,2021,-2012};
 	int duljina_niza = sizeof(niz) / sizeof(niz[0]);
 
-	int minimalan_broj = (min_broj_u_nizu(niz,duljina_niza));
-	int maximalan_broj = (max_broj_u_nizu(niz,duljina_niza));
+	int minimum = niz[0];
+	int maximum = niz[0];
 
-	std::cout<<"Min: "<<minimalan_broj<<::endl;
-	std::cout<<"Max: "<<maximalan_broj<<::endl;
+	prepravljeno_2u1(niz,duljina_niza,&minimum,&maximum);
+
+	std::cout<<maximum<<endl;
+	std::cout<<minimum<<endl;
 
 	
 }
