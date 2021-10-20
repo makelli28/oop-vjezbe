@@ -4,7 +4,9 @@ using namespace std;
 //1. Napisati funkciju koja računa najveći i najmanji broj u nizu od n prirodnih
 //brojeva. Funkcija vraća tražene brojeve pomoću referenci.
 
-void najveci_najmanji(int* niz,int& najveci,int& najmanji,int duljina){
+
+
+void najveci_najmanji(int* niz,int &najveci,int &najmanji,int duljina){
 	int i=0;
 	najveci=niz[i];
 	najmanji=niz[i];

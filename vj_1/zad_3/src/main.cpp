@@ -11,11 +11,11 @@ int prepravljeno_2u1(int niz[],int duljina_niza,int* pointer_na_min,int* pointer
 		};
 	//za minimum
 	for (int i = 0; i < duljina_niza; i++)
-	{
-		if (*pointer_na_min > niz[i]){
+		{
+			if (*pointer_na_min > niz[i]){
 			*pointer_na_min=niz[i];
-		}
-	};
+			}
+		};
 }
 
 

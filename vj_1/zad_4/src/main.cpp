@@ -1,47 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int vracanje_najveceg(int a,int b){
-	if (a>b)
-	{
-		return a;
-	}else return b;
+int rekurzija (int niz[],int* minimum,int* maximum,int brojac,int duljina_niza){
+	if (brojac == duljina_niza)
+		return 0;
+	else if(*minimum < niz[brojac]){
+		*minimum = niz[brojac];
+	}
+	if(*maximum > niz[brojac]){
+		*maximum = niz[brojac];
+	}
+	rekurzija(niz,minimum,maximum,brojac+1,duljina_niza);
 }
-
-int vracanje_najmanjeg(int a,int b){
-	if (a<b)
-	{
-		return a;
-	}else return b;
-}
-
-
-int min_broj_rekurzija(int niz[], int duljina)
-{
-     if (duljina == 0){
-         return niz[0];
-		 }
-     return vracanje_najmanjeg(niz[duljina - 1], min_broj_rekurzija(niz,duljina-1));
- }
-
- int max_broj_rekurzija(int niz[], int duljina)
-{
-     if (duljina == 0){
-         return niz[0];
-		 }
-     return vracanje_najveceg(niz[duljina - 1], min_broj_rekurzija(niz,duljina-1));
- }
 
 int main() {
-    
-    int niz[] = {1,2,3,4,-1,6,7};
- 	int duljina = sizeof(niz)/sizeof(niz[0]);
 
-    int final_min = min_broj_rekurzija(niz, duljina);
-	int final_max = max_broj_rekurzija(niz, duljina);
+	int niz []={9999,1,2,3,4,-1,9,111,1221};
+	int duljina= sizeof(niz)/sizeof(niz[0]);
+	int brojac = 0;
 
-	std::cout << "najmanji: "<<final_min << endl;
-	std::cout << "najmanji: "<<final_max << endl;
+	int min=niz[0];
+	int max=niz[0];
 
-	return 0;
+	rekurzija(niz,&min,&max,brojac,duljina);
+	
+	std::cout << "minimum je: " << min <<endl;
+	std::cout << "maximum je: " << max <<endl;
 }
