@@ -2,7 +2,7 @@
 using namespace std;
 #include <time.h>
 #include <iomanip>
-
+//ubuduce engleske nazive
 
 struct Matrica
 {
@@ -20,6 +20,7 @@ struct Matrica
 
 	void alokacija_matrice_mxn(int redak,int stupac){
 		//neradi bez -> //zasto?
+		//zbog istog imena stupac//stupac
 		this->red = redak;
 		this->stupac = stupac;
 
