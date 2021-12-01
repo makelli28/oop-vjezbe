@@ -34,12 +34,8 @@ int main()
 	//zadatak 2 -test
 	Weapon kalas,pozicija_metka;
 	pozicija_metka.setz();
-//	std::cout << "Weapon Position" << std::endl;
-//	std::cout << "X: " << kalas.getx() << ", Y: " << kalas.gety() << ", Z: "<< kalas.getz() << std::endl;
-//	std::cout << "weapon hit: "<< std::endl;
 	p1.setZ(kalas.getz());
-//	std::cout << "X: " << p1.getX() << " Y: " << p1.getY() << " Z: " << p1.getZ() << std::endl;
-//	std::cout << std::endl;
+
 
 
 	// final
@@ -50,6 +46,7 @@ int main()
 	std::vector <Point> randsp;
 	int counterT =0;
 	int counterB =0;
+	
 	//Bullethit random generating
 	while (counterB < kalas.getFullClipSize()){
 		pozicija_metka.Shoot();
@@ -72,11 +69,8 @@ int main()
 		cout << "Lower dot: X: " << randsp.at(i).getX() << endl;
 		cout << "Lower dot: y: " << randsp.at(i).getY() << endl;
 		cout << "Lower dot: z: " << randsp.at(i).getZ() << endl;
-		
 		}
 
-
-	//Target randomTargets;
 	cout  << endl;
 	cout << "Targets!" << endl;
 	while(counterT < numT){
@@ -131,93 +125,8 @@ int main()
 	 		else {cout << "miss" << endl;}
 		}else {cout << "oruzje nije u visini mete"<<endl;}
 	}
-	}
+}
 
 cout << "Jednim punjenjem poođeno je: " << targetHitCounter << " meta" << endl;
-	//mozda - jednim punjenjem gađam mete , reloadam , i gađam sve dok se sve mete ne pogode
-	// while(counterT < numT){
-		
-	// 	Point bulletHit;
-
-	// 	bulletHit.setRandomValue(low,high);
-	// 	bulletHit.setZ(kalas.getz());
-		
-	// 	int x1,y1,z1,x2,y2,z2,swaptemp;
-	// 	x1 = randomTargets.GetDotLD_x();
-	// 	y1 = randomTargets.GetDotLD_y();
-	// 	z1 = randomTargets.GetDotLD_z();
-	// 	x2 = randomTargets.GetDotUR_x();
-	// 	y2 = randomTargets.GetDotUR_y();
-	// 	z2 = randomTargets.GetDotUR_z();		
-
-	// 	if(x1 > x2){
-	// 		swaptemp = x1;
-	// 		x1 = x2;
-	// 		x2 = swaptemp;
-	// 	}
-	// 	if(y1 > y2){
-	// 		swaptemp = y1;
-	// 		y1 = y2;
-	// 		y2 = swaptemp;
-	// 	}
-	// 	if(z1 > z2){
-	// 		swaptemp = z1;
-	// 		z1 = z2;
-	// 		z2 = swaptemp;
-	// 	}
-	// 	if(bulletHit.getZ() >= z1 and bulletHit.getZ() <= z2){
-	// 		if (bulletHit.getX() >= x1  and bulletHit.getX() <= x2 and bulletHit.getY() >= y1 and bulletHit.getY() <= y2)
-	// 		{
-	// 			cout << "hit" << endl;
-	// 		}
-	// 		else {cout << "miss" << endl;}
-	// 	}
-	// 	//std::cout << "Donja Liva tocka: (" << randomTargets.GetDotLD_x() << "," << randomTargets.GetDotLD_y() << "," << randomTargets.GetDotLD_z()<<")"<<std::endl;
-	// 	// std::cout << "Gornja Desna tocka: (" << randomTargets.GetDotUR_x() << "," << randomTargets.GetDotUR_y() << "," << randomTargets.GetDotUR_z()<<")"<<std::endl;
-	// 	// std::cout << endl;
-	// 	// std::cout << "Bullet hit: " <<  "X: " << bulletHit.getX() << " Y: " << bulletHit.getY() << " Z: " << bulletHit.getZ() << std::endl;
-
 	
-	// 	counterT++;
-	// 	randst.push_back(bulletHit);
-	// }
-
-	// for (int i = 0; i < numT; i++){
-	// 	cout << randst.at(i).getX()<<endl;
-	// }
-
-	// while (counterB < kalas.getFullClipSize())
-	// {
-	// 	Point bulletHit;
-	// 	bulletHit.setRandomValue(low,high);
-	// 	bulletHit.setZ(kalas.getz());
-	// 	std::cout << "Bullet hit: " <<  "X: " << bulletHit.getX() << " Y: " << bulletHit.getY() << " Z: " << bulletHit.getZ() << std::endl;
-	// 	counterB++;
-	// }
-	
-
-	// int counter=0;
-	// while(1){
-	// 	int a;
-		
-	// 	std::cout << "For shooting press 1, for reloading press 0" << std::endl;
-	// 	std::cin >> a;
-
-	// 	if (a == 0)
-	// 	{
-	// 		kalas.Reload();
-	// 		std::cout << "Reloading..." << std::endl;
-	// 		counter = 0;
-	// 	}
-
-	// 	else{
-	// 		kalas.Shoot();
-	// 		std::cout << "choot!" << std::endl;
-	// 		counter++;
-	// 		if (counter == kalas.getFullClipSize())
-	// 		{
-	// 			break;
-	// 		}
-	// 	}
-	// }
 }
