@@ -10,5 +10,6 @@ int main(){
     hangmanModel model;
     model.getRanMovie();
     Controller cont_1;
+
     cont_1.checkIfGameIsOver();
 }

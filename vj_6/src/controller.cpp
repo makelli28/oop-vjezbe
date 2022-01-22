@@ -38,6 +38,7 @@ void Controller::updateLives(){
 void Controller::checkIfGameIsOver(){
    cout << "Game is about to start..." << endl;
    cout << "Your current lives: " << model_1.getterLives() <<endl;
+   //cout << "FILM: " << model_1.getterMovie() << endl;
    cout << model_1.getterUnderscore();
     while (1){
         if(model_1.getterMovie() == model_1.getterUnderscore()){
