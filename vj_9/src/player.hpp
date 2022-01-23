@@ -2,9 +2,10 @@
 #include <ctime>
 #include <cstdlib>
 class player{
-    private:
+    protected:
     int total;
     int gamePoints;
+    int max;
 
     public:
     void setTotal(int t){this->total = t;}
@@ -16,10 +17,6 @@ class player{
 
 
 class humanplayer : player{
-     private:
-     int total;
-     int gamePoints;
-
     public:
     humanplayer (){
         gamePoints = 0; 
@@ -33,8 +30,8 @@ class humanplayer : player{
 };
 
 class computerPlayer : player{
-        private:
-        int max;
+        // private:
+        // int max;
 
         public:
             computerPlayer (){}

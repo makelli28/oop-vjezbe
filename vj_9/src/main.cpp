@@ -14,6 +14,7 @@ int main()
 {	
 	humanplayer p1,p2;
 	computerPlayer c1,c2;
+	
 	game g1;
 	int choice;
 
